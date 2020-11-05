@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     ProductListComponent,
     ProductCategoryMenuComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
