@@ -8,6 +8,7 @@ import { ProductCategoryMenuComponent } from './components/product-category-menu
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductCategoryMenuComponent
+    ProductCategoryMenuComponent,
+    ProductDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
