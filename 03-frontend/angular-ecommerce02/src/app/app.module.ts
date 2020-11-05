@@ -3,13 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
 
 const routes: Routes = [
+  {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
   {path: '', redirectTo: '/products', pathMatch: 'full'},
   {path: '**', redirectTo: '/products', pathMatch: 'full'},
@@ -24,7 +29,13 @@ const routes: Routes = [
     ProductCategoryMenuComponent
   ],
   imports: [
-    BrowserModule
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    BrowserModule,
+    HttpClientModule,
+    NgbModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
