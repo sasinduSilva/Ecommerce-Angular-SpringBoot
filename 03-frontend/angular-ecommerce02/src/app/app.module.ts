@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SearchComponent } from './components/search/search.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 
@@ -30,7 +31,8 @@ const routes: Routes = [
     ProductListComponent,
     ProductCategoryMenuComponent,
     ProductDetailsComponent,
-    SearchComponent
+    SearchComponent,
+    CheckoutComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
