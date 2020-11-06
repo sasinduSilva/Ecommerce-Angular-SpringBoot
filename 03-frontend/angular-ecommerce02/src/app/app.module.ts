@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { SearchComponent } from './components/search/search.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 
 
 
@@ -34,7 +35,8 @@ const routes: Routes = [
     ProductDetailsComponent,
     SearchComponent,
     CheckoutComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    CartStatusComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
