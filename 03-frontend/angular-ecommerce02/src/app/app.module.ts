@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SearchComponent } from './components/search/search.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 
 
@@ -32,7 +33,8 @@ const routes: Routes = [
     ProductCategoryMenuComponent,
     ProductDetailsComponent,
     SearchComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CartDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
