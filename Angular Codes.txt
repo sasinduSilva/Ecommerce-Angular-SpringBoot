@@ -1,0 +1,1 @@
+ng add @angular/localize - need to be added in order to deal with the server of the back end

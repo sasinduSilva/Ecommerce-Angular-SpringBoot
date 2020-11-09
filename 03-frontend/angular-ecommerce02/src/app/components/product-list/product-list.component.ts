@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartItem } from 'src/app/common/cart-item';
 import { Product } from 'src/app/common/product';
+import { CartServiceService } from 'src/app/services/cart-service.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -19,11 +21,12 @@ export class ProductListComponent implements OnInit {
   //properties for pagination
 
   thePageNumber: number = 1;
-  thePageSize: number = 1;
+  thePageSize: number = 5;
   theTotalElements: number = 0;
   previousKeyword: string = null;
 
   constructor(private productService: ProductService,
+              private cartServices: CartServiceService,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -95,13 +98,13 @@ export class ProductListComponent implements OnInit {
   }
 
   addToCart(theProduct: Product){
-    // console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
+    console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
 
-    // //todo do the real work
+    //todo do the real work
 
-    // const theCartItem = new theCartItem(theProduct);
+    const theCartItem = new CartItem(theProduct);
 
-    // this.cartService.addToCart(theCartItem);
+    this.cartServices.addToCart(theCartItem);
   }
 
   handleSearchProducts() {

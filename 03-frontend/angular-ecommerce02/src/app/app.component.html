@@ -1,53 +1,52 @@
 <div class="page-wrapper">
-  
-  <!--Menu Sidebar-->
+
+  <!-- MENU SIDEBAR-->
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
       <a routerLink="/products">
-        <img src="assets/images/logo.png" alt="braavoShop" class="img-responsive">
+        <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
       </a>
     </div>
-    
-    <!--This is where the app-product-categry-menu component is called-->
+
     <app-product-category-menu></app-product-category-menu>
-
     
-
   </aside>
+  <!-- END MENU SIDEBAR-->
 
-  <!--End menu sidebar-->
-
-  <!--Page Container-->
+  <!-- PAGE CONTAINER-->
   <div class="page-container">
-    <!--Header Desktop-->
+    <!-- HEADER DESKTOP-->
     <header class="header-desktop">
       <div class="section-content section-content-p30">
         <div class="container-fluid">
           <div class="header-wrap">
 
-            <!--This is where the app-search component and app-cart-status component are called-->
-            <!--This is where the app-search component and app-cart-status component are called-->
+            <app-search></app-search>
 
+            <app-cart-status></app-cart-status>
+
+            
+
+            
           </div>
           <div class="account-wrap"></div>
         </div>
       </div>
     </header>
-    <!--End Header Desktop-->
+    <!-- END HEADER DESKTOP-->
 
-    <!--Main Content-->
+    <!-- MAIN CONTENT-->
 
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
 
-   <app-product-list></app-product-list>
-
-
+    <!-- <app-product-list></app-product-list> -->
 
 
   </div>
 </div>
 
-<!--End Page Container-->
+<!-- ENDS PAGE CONTAINER -->
+
 <footer>
   <ul>
     <li><a href="#">About Us</a></li>
